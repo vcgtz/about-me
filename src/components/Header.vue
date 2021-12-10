@@ -9,6 +9,13 @@
           <a href="#" class="py-2 px-6 flex hover:text-black line-through">Blog</a>
           <a href="#" class="py-2 px-6 flex hover:text-black line-through">Contact</a>
         </nav>
+
+        <nav class="lg:hidden absolute top-0 right-0 w-auto p-8 bg-white text-right justify-items-end">
+          <a href="#" class="text-2xl">✖</a>
+          <a href="#" class="py-2 px-6 flex hover:text-black line-through">Resume</a>
+          <a href="#" class="py-2 px-6 flex hover:text-black line-through">Blog</a>
+          <a href="#" class="py-2 px-6 flex hover:text-black line-through">Contact</a>
+        </nav>
         
         <button class="lg:hidden flex flex-col ml-4">
           <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1"></span>
