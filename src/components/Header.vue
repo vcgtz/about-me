@@ -4,20 +4,20 @@
       <MainLogo />
       
       <div class="flex items-center">
-        <nav class="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
-          <a href="#" class="py-2 px-6 flex hover:text-black line-through">Resume</a>
-          <a href="#" class="py-2 px-6 flex hover:text-black line-through">Blog</a>
-          <a href="#" class="py-2 px-6 flex hover:text-black line-through">Contact</a>
+        <nav class="font-sen text-gray-300 dark:text-white uppercase text-lg lg:flex items-center hidden">
+          <a href="#" class="py-2 px-6 flex hover:text-gray-300 line-through cursor-not-allowed">Resume</a>
+          <a href="#" class="py-2 px-6 flex hover:text-gray-300 line-through cursor-not-allowed">Blog</a>
+          <a href="#" class="py-2 px-6 flex hover:text-gray-300 line-through cursor-not-allowed">Contact</a>
         </nav>
 
-        <nav class="lg:hidden absolute top-0 right-0 w-auto p-8 bg-white text-right justify-items-end">
-          <a href="#" class="text-2xl">✖</a>
-          <a href="#" class="py-2 px-6 flex hover:text-black line-through">Resume</a>
-          <a href="#" class="py-2 px-6 flex hover:text-black line-through">Blog</a>
-          <a href="#" class="py-2 px-6 flex hover:text-black line-through">Contact</a>
+        <nav v-if="showMobileMenu" class="lg:hidden absolute top-0 right-0 w-auto p-10 bg-white text-lg text-right justify-items-end text-gray-300">
+          <button @click="closeMobileMenu()" class="text-2xl">✖</button>
+          <a href="#" class="py-2 px-6 flex hover:text-gray-300 line-through cursor-not-allowed">Resume</a>
+          <a href="#" class="py-2 px-6 flex hover:text-gray-300 line-through cursor-not-allowed">Blog</a>
+          <a href="#" class="py-2 px-6 flex hover:text-gray-300 line-through cursor-not-allowed">Contact</a>
         </nav>
         
-        <button class="lg:hidden flex flex-col ml-4">
+        <button @click="openMobileMenu()" class="lg:hidden flex flex-col ml-4">
           <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1"></span>
           <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1"></span>
           <span class="w-6 h-1 bg-gray-800 dark:bg-white mb-1"></span>
@@ -33,6 +33,18 @@ import MainLogo from './MainLogo.vue';
 export default {
   components: { MainLogo },
   name: 'Header',
+  data: () => ({
+    showMobileMenu: false,
+  }),
+  methods: {
+    closeMobileMenu () {
+      this.showMobileMenu = false;
+    },
+
+    openMobileMenu () {
+      this.showMobileMenu = true;
+    }
+  }
 }
 </script>
 
