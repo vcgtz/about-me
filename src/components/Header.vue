@@ -1,5 +1,5 @@
 <template>
-  <header class="h-24 sm:h-32 flex items-center z-30 w-full">
+  <header class="h-20 sm:h-24 flex items-center z-30 w-full">
     <div class="container mx-auto px-6 flex items-center justify-between">
       <MainLogo />
       

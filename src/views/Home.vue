@@ -13,7 +13,11 @@
             :array="descriptions"
             :typeSpeed="typeSpeed"
             :eraseSpeed="eraseSpeed"
-            class="max-w-3xl text-4xl md:text-4xl font-bold mx-auto dark:text-white text-gray-800 text-center py-2" />
+            class="max-w-3xl text-4xl md:text-4xl font-bold mx-auto dark:text-white text-gray-800 text-center py-2 mb-8" />
+
+          <div class="grid justify-items-start w-10/12 self-center">
+            <p class="my-2">Soy desarrollador de software desde hace {{ yearsAsDev }} años. Mi principal rol ha sido <span class="underline">desarrollador backend</span>. Mi stack tecnológico esta conformado por: <span class="italic">Javascript, NodeJS, PHP, Laravel, MySQL, MongoDB, VueJS</span>.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -32,6 +36,12 @@ export default {
     descriptions: ['Software Engineer', 'Backend Developer', 'Gamer', 'Geek'],
     typeSpeed: 150,
     eraseSpeed: 50,
+    programmerSince: 2014
   }),
+  computed: {
+    yearsAsDev() {
+      return new Date().getFullYear() - this.programmerSince;
+    }
+  }
 }
 </script>
