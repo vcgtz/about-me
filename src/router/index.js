@@ -5,7 +5,7 @@ import Contact from '../views/Contact.vue';
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     meta: {
       title: '',
     },
@@ -14,7 +14,7 @@ const routes = [
 
   {
     path: '/contact',
-    name: 'Contact',
+    name: 'contact',
     meta: {
       title: 'Contacto',
     },
