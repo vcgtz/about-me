@@ -17,7 +17,7 @@
             class="py-2 px-6 flex hover:text-gray-800">Contact</router-link>
         </nav>
 
-        <nav v-if="showMobileMenu" class="lg:hidden absolute top-0 right-0 w-auto p-10 bg-white text-lg text-right justify-items-end text-gray-300">
+        <nav v-if="showMobileMenu" class="lg:hidden absolute top-0 right-0 w-auto p-10 bg-white text-lg text-right justify-items-end text-gray-300 z-50">
           <button @click="closeMobileMenu()" class="text-2xl">✖</button>
           <router-link
             :to="{ name: 'home'}"
