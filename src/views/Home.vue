@@ -9,10 +9,12 @@
           <img src="@/assets/profile.png" class="rounded-full w-28 mx-auto"/>
           <p class="text-3xl my-6 text-center dark:text-white">Hola, soy Vicente Gutiérrez 👾</p>
 
-          <h2 class="max-w-3xl text-5xl md:text-6xl font-bold mx-auto dark:text-white text-gray-800 text-center py-2">
-            Software Engineer & Gamer
-          </h2>
-          
+          <Writer
+            :array="descriptions"
+            :typeSpeed="typeSpeed"
+            :eraseSpeed="eraseSpeed"
+            class="max-w-3xl text-4xl md:text-4xl font-bold mx-auto dark:text-white text-gray-800 text-center py-2" />
+
           <div class="flex items-center justify-center mt-4">
             Contactate conmigo. Puedes enviarme un correo electrónico o seguirme en mis redes sociales.
           </div>
@@ -41,9 +43,15 @@
 
 <script>
 import Header from '@/components/Header.vue';
+import Writer from '@/components/Writer.vue';
 
 export default {
-  components: { Header },
+  components: { Header, Writer },
   name: 'Home',
+  data: () => ({
+    descriptions: ['Software Engineer', 'Backend Developer', 'Gamer', 'Geek'],
+    typeSpeed: 150,
+    eraseSpeed: 50,
+  }),
 }
 </script>
