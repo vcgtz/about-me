@@ -5,18 +5,30 @@
       
       <div class="flex items-center">
         <nav class="font-sen text-gray-300 dark:text-white uppercase text-lg lg:flex items-center hidden">
-          <router-link :to="{ name: 'home'}" class="py-2 px-6 flex hover:text-gray-800">Home</router-link>
+          <router-link
+            :to="{ name: 'home'}"
+            :class="{'text-gray-800': currentRoute === 'home'}"
+            class="py-2 px-6 flex hover:text-gray-800">Home</router-link>
           <a href="#" class="py-2 px-6 flex hover:text-gray-300 line-through cursor-not-allowed">Resume</a>
           <a href="#" class="py-2 px-6 flex hover:text-gray-300 line-through cursor-not-allowed">Blog</a>
-          <router-link :to="{ name: 'contact'}" class="py-2 px-6 flex hover:text-gray-800">Contact</router-link>
+          <router-link
+            :to="{ name: 'contact'}"
+            :class="{'text-gray-800': currentRoute === 'contact'}"
+            class="py-2 px-6 flex hover:text-gray-800">Contact</router-link>
         </nav>
 
         <nav v-if="showMobileMenu" class="lg:hidden absolute top-0 right-0 w-auto p-10 bg-white text-lg text-right justify-items-end text-gray-300">
           <button @click="closeMobileMenu()" class="text-2xl">✖</button>
-          <router-link :to="{ name: 'home'}" class="py-2 px-6 flex hover:text-gray-800">Home</router-link>
+          <router-link
+            :to="{ name: 'home'}"
+            :class="{'text-gray-800': currentRoute === 'home'}"
+            class="py-2 px-6 flex hover:text-gray-800">Home</router-link>
           <a href="#" class="py-2 px-6 flex hover:text-gray-300 line-through cursor-not-allowed">Resume</a>
           <a href="#" class="py-2 px-6 flex hover:text-gray-300 line-through cursor-not-allowed">Blog</a>
-          <router-link :to="{ name: 'contact'}" class="py-2 px-6 flex hover:text-gray-800">Contact</router-link>
+          <router-link
+            :to="{ name: 'contact'}"
+            :class="{'text-gray-800': currentRoute === 'contact'}"
+            class="py-2 px-6 flex hover:text-gray-800">Contact</router-link>
         </nav>
         
         <button @click="openMobileMenu()" class="lg:hidden flex flex-col ml-4">
@@ -38,6 +50,11 @@ export default {
   data: () => ({
     showMobileMenu: false,
   }),
+  computed: {
+    currentRoute() {
+      return this.$route.name;
+    }
+  },
   methods: {
     closeMobileMenu () {
       this.showMobileMenu = false;
@@ -46,7 +63,7 @@ export default {
     openMobileMenu () {
       this.showMobileMenu = true;
     }
-  }
+  },
 }
 </script>
 
