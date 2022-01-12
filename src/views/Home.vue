@@ -7,14 +7,14 @@
       <div class="container mx-auto px-6 flex flex-col justify-between items-center relative py-4">
         <div class="flex flex-col">
           <img src="@/assets/profile.png" class="rounded-full w-28 mx-auto"/>
-          <p class="text-3xl my-6 text-center dark:text-white">Hi, I&#x27;m Vicente Gutiérrez 👾</p>
+          <p class="text-3xl my-6 text-center dark:text-white">Hola, soy Vicente Gutiérrez 👾</p>
 
           <h2 class="max-w-3xl text-5xl md:text-6xl font-bold mx-auto dark:text-white text-gray-800 text-center py-2">
             Software Engineer & Gamer
           </h2>
           
           <div class="flex items-center justify-center mt-4">
-            Connect with me. You can send me an email or follow me on my social networks.
+            Contactate conmigo. Puedes enviarme un correo electrónico o seguirme en mis redes sociales.
           </div>
 
           <div class="flex items-center justify-center">
