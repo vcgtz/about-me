@@ -9,7 +9,7 @@
           <p class="text-3xl my-6 text-center dark:text-white">Contáctame 📬</p>
 
           <p class="my-8">Si deseas ponerte en contacto conmigo, puedes hacerlo a través del siguiente correo electrónico:</p>
-          <p class="text-center"><a href="vcgtzmx@gmail.com">📨 vcgtzmx@gmail.com</a></p>
+          <p class="text-center"><a href="mailto:vcgtzmx@gmail.com">📨 vcgtzmx@gmail.com</a></p>
 
           <div class="flex items-center justify-center my-8">
             O sígueme en mis redes sociales:
